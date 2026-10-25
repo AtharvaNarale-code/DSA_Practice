@@ -52,4 +52,19 @@ int countVowel(string s,int i){
     }
     return count + countVowel(s,i+1);
 }
+
+//Highly good questions for recursion practice 
+//Count Paths in a Grid: Given an $M \times N$ grid, count all unique paths from top-left to bottom-right if you can only move Right or Down.
+int countPaths(int i, int j, int M, int N) {
+    // Base Case 1: If we reach the bottom-right destination, we found 1 valid path
+    if (i == M - 1 && j == N - 1) {
+        return 1;
+    }
+    if (i >= M || j >= N) {
+        return 0; // Out of bounds
+    }
+    int moveDown = countPaths(i + 1, j, M, N);
+    int moveRight = countPaths(i, j + 1, M, N);
+    return moveDown + moveRight;
+}
 };
