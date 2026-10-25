@@ -1,0 +1,61 @@
+---
+
+### Day 1: Call Stack & Winding/Unwinding
+
+1. **Print `1` to `N`:** Write a function `print_1_to_n(n)` that prints numbers from `1` to `N` using recursion (printing during unwinding).
+2. **Print `N` to `1`:** Write a function `print_n_to_1(n)` that prints numbers from `N` down to `1` using recursion (printing during winding).
+3. **Factorial:** Implement `factorial(n)` recursively. Trace the call stack for `n = 4`.
+4. **Sum of `1` to `N`:** Compute $\sum_{i=1}^{N} i$ recursively.
+5. **Count Digits:** Count the total number of digits in a non-negative integer `n` recursively (e.g., `count_digits(1432) -> 4`).
+
+---
+
+### Day 2: Return Values & String Manipulation
+
+6. **Power Function ($x^n$):** Implement `my_pow(x, n)` recursively. Can you optimize it to $O(\log n)$ using exponentiation by squaring?
+7. **Sum of Array Elements:** Compute the sum of an array `nums` recursively by passing an index `i`.
+8. **Find Maximum Element:** Find the maximum element in an array recursively using divide-and-conquer or index iteration.
+9. **Reverse a String:** Write a function `reverse_string(s)` that returns the reversed string recursively.
+10. **Count Occurrences:** Count how many times a target element `target` appears in an array `nums` using recursion.
+
+---
+
+### Day 3: Indices, Conditions & Decision Trees
+
+11. **Check Array Sorted:** Return `True` if an array is sorted in non-decreasing order, otherwise `False`.
+12. **Palindrome String Check:** Check if a string `s` is a palindrome recursively (e.g., `"racecar"` $\rightarrow$ `True`).
+13. **Recursive Binary Search:** Implement binary search on a sorted array recursively given `low` and `high` pointers.
+14. **Linear Search:** Return the first index of `target` in an array `nums`, or `-1` if absent, using recursion.
+15. **Count Vowels:** Count the total number of vowels in a string `s` recursively.
+
+---
+
+### Day 4: Multiple Recursive Calls (Branching)
+
+16. **Fibonacci Number:** Calculate the $N$-th Fibonacci number using $F(n) = F(n-1) + F(n-2)$. Draw the recursion tree for $N = 4$.
+17. **Climbing Stairs (LeetCode 70):** You can climb $1$ or $2$ steps. How many distinct ways can you reach the top of $N$ stairs?
+18. **Count Paths in a Grid:** Given an $M \times N$ grid, count all unique paths from top-left to bottom-right if you can only move **Right** or **Down**.
+19. **Coin Change (Way Counting):** Given coin denominations and a target amount, count the total ways to make the target amount (infinite supply of coins).
+20. **Tribonacci Number:** Calculate $T(n) = T(n-1) + T(n-2) + T(n-3)$ given base values $T(0)=0, T(1)=1, T(2)=1$.
+
+---
+
+### Day 5: Subsequences & Subsets (Include / Exclude Pattern)
+
+21. **Generate Binary Strings:** Print or return all binary strings of length $N$ (e.g., for $N=2$: `["00", "01", "10", "11"]`).
+22. **Subsets / Power Set (LeetCode 78):** Given an array of unique integers, return all possible subsets.
+23. **Subsets Sum to $K$:** Print all subsequences of an array whose elements sum up to a target $K$.
+24. **Count Subsets with Sum $K$:** Count how many subsequences have a sum equal to $K$.
+25. **Letter Combinations of a Phone Number (LeetCode 17):** Generate all possible letter combinations given a string of digits (2–9).
+
+---
+
+### Day 6: Backtracking Foundations (Choose – Recurse – Undo)
+
+26. **Subsets II (LeetCode 90):** Given an array that may contain **duplicates**, return all distinct subsets.
+27. **Permutations (LeetCode 46):** Given an array of distinct integers, return all possible permutations.
+28. **Combination Sum (LeetCode 39):** Find all unique combinations in an array where numbers can be chosen unlimited times to sum to `target`.
+29. **Palindrome Partitioning (LeetCode 131):** Partition a string `s` such that every substring of the partition is a palindrome. Return all possible partitions.
+30. **Word Search (LeetCode 79):** Given an $M \times N$ grid of characters and a string `word`, return `True` if `word` exists in the grid using adjacent cell traversal.
+
+---
