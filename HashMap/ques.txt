@@ -1,0 +1,59 @@
+Here is a curated, step-by-step roadmap of **20 questions** designed specifically to clear up any confusion with C++ Hash Maps (`std::unordered_map` and `std::unordered_set`).
+
+It targets key weak points: **frequency counting, retrieving keys by value, grouping, subsegment tracking, and custom map structures.**
+
+---
+
+### Phase 1: Frequency Counting & Direct Value Retrieval
+
+*Master basic insertion, counting, and iterating through map key-value pairs (`pair<const Key, Value>`).*
+
+1. **Character Frequency Counter:** Given a string `s`, build a frequency map. Then, print all characters that appear an odd number of times.
+2. **First Unique Character in a String (LeetCode 387):** Find the index of the first non-repeating character using frequency counting.
+3. **Find the Mode(s):** Given an integer array, find the element(s) with the maximum frequency. If multiple elements have the same max frequency, return all of them.
+4. **Sort Characters By Frequency (LeetCode 451):** Build a frequency map, then sort or bucket the elements by their frequency to construct a new string.
+
+---
+
+### Phase 2: Structural Lookups & Complement Tracking
+
+*Learn to query the map dynamically during iteration rather than storing everything first.*
+
+5. **Two Sum (LeetCode 1):** Given an array and a target sum, find indices of two numbers that add up to target. *(Key skill: store `value -> index` instead of `value -> count`)*.
+6. **Valid Anagram (LeetCode 242):** Check if two strings are anagrams using a single frequency map (increment for `s`, decrement for `t`).
+7. **Intersection of Two Arrays II (LeetCode 350):** Find common elements between two arrays, accounting for element frequencies.
+8. **Check if Array Pairs Are Divisible by K (LeetCode 1497):** Count remainders `num % k` in a frequency map and pair complement remainders.
+
+---
+
+### Phase 3: Inverting Maps (Retrieving Keys by Value) & Grouping
+
+*Overcome the core confusion: how to group keys together based on shared values/attributes.*
+
+9. **Group Anagrams (LeetCode 49):** Group strings that are anagrams of each other. *(Key skill: map key is the sorted string or frequency key, value is a `vector<string>`)*.
+10. **Group Elements by Frequency:** Convert an array into a `std::unordered_map<int, vector<int>>` where the key is the **frequency count** and the value is a list of elements having that frequency.
+11. **Top K Frequent Elements (LeetCode 347):** Use a frequency map combined with a min-heap or bucket sort to get the $K$ most frequent elements.
+12. **Isomorphic Strings (LeetCode 205):** Determine if two strings `s` and `t` are isomorphic by maintaining a bidirectional mapping (two maps or map + set).
+
+---
+
+### Phase 4: Prefix Sum + Hash Map (The "Subsegment" Pattern)
+
+*A critical LeetCode pattern: tracking cumulative states to find sub-arrays meeting specific criteria.*
+
+13. **Subarray Sum Equals K (LeetCode 560):** Count the number of continuous subarrays that sum to $K$ using a `prefix_sum -> count` hash map.
+14. **Contiguous Array (LeetCode 525):** Find the maximum length of a contiguous subarray with an equal number of 0s and 1s. *(Key skill: `prefix_sum -> first_seen_index`)*.
+15. **Continuous Subarray Sum (LeetCode 523):** Find if an array has a continuous subarray of size at least 2 that sums to a multiple of $k$.
+
+---
+
+### Phase 5: Advanced Hash Map Patterns & Custom Types
+
+*Handling sliding windows, custom keys, and combined data structures.*
+
+16. **Longest Consecutive Sequence (LeetCode 128):** Find the length of the longest consecutive elements sequence in $O(n)$ time using `std::unordered_set`.
+17. **Find All Anagrams in a String (LeetCode 438):** Maintain a fixed-size sliding window frequency map and compare it to a target string's frequency map.
+18. **Custom Pair as Key:** Create a custom hash function for `std::pair<int, int>` to use as a key in `std::unordered_map<pair<int, int>, int, CustomHash>`.
+19. **Insert Delete GetRandom O(1) (LeetCode 381 - Duplicates allowed):** Combine a `std::vector` and a `std::unordered_map<int, std::unordered_set<int>>` to achieve $O(1)$ operations with duplicate tracking.
+20. **LRU Cache (LeetCode 146):** Build a Least Recently Used cache using a `std::unordered_map<int, std::list<pair<int, int>>::iterator>` and a doubly-linked list.
+

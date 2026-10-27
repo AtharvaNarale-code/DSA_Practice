@@ -66,5 +66,5 @@ int countPaths(int i, int j, int M, int N) {
     int moveDown = countPaths(i + 1, j, M, N);
     int moveRight = countPaths(i, j + 1, M, N);
     return moveDown + moveRight;
-}
+    }
 };
